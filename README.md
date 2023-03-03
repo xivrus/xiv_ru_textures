@@ -1,6 +1,6 @@
 # xiv_ru_textures
 
-Russian textures for XIV Rus modpack / Русский текстуры для модпака XIV Rus
+Russian textures for XIV Rus modpack / Русские текстуры для модпака XIV Rus
 
 ## Disclaimer
 
