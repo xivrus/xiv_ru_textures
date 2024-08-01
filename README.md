@@ -13,7 +13,8 @@ This repo utilizes resources and media produced and copyrighted by SQUARE ENIX. 
 ### Инструменты
 
 * [**SaintCoinach.Cmd**](https://github.com/xivapi/SaintCoinach) - извлечение текстур
-* [**TexConv**](https://github.com/microsoft/DirectXTex) - конвертация текстур из PNG в DDS
+* [**TexConv**](https://github.com/microsoft/DirectXTex) - конвертация текстур из PNG в DDS для Windows
+* [**Cuttlefish**](https://github.com/akb825/Cuttlefish) - конвертация текстур из PNG в DDS для Linux
 * [**ffxiv-tex-converter**](https://github.com/emarron/ffxiv-tex-converter) - конвертация текстур из DDS в TEX (игровой формат)
 
 ### Рабочий процесс для текстурщика
@@ -33,9 +34,13 @@ This repo utilizes resources and media produced and copyrighted by SQUARE ENIX. 
 
 ### Рабочий процесс для упаковщика
 
-1. Склонировать этот репозиторий
-2. Скачать бинарник **TexConv** и положить его в корень этого репозитория
-3. Запустить `ConvertModToTex.bat`
+1. Установить требуемые компоненты:
+   * Python 3.10
+   * [Модули Python](https://github.com/emarron/ffxiv-tex-converter/tree/main?tab=readme-ov-file#required-python-libraries) для `ffxiv-tex-converter`
+2. Склонировать этот репозиторий вместе с подмодулем
+3. Windows: Скачать бинарник **TexConv** и положить его в корень этого репозитория. Путь до исполняемого файла должен быть: `.\texconv.exe`\
+   Linux: Скачать последний релиз **Cuttlefish** и распаковать его в корень этого репозитория. Путь до исполняемого файла должен быть: `./cuttlefish/bin/cuttlefish`
+4. Запустить `ConvertModToTex-Win.bat` или `ConvertModToTex-Linux.ps1` в зависимости от платформы
 
 Готово, сконвертированные текстуры будут в папке `root_mod_png_dds_tex` и их можно использовать как есть. Например, в модпаке Penumbra (требуется сгенерировать JSON с перенаправлениями файлов) или импортировать как raw файлы в TexTools.
 
@@ -44,7 +49,8 @@ This repo utilizes resources and media produced and copyrighted by SQUARE ENIX. 
 ### Tools
 
 * [**SaintCoinach.Cmd**](https://github.com/xivapi/SaintCoinach) - texture extraction
-* [**TexConv**](https://github.com/microsoft/DirectXTex) - texture conversion from PNG to DDS
+* [**TexConv**](https://github.com/microsoft/DirectXTex) - конвертация текстур из PNG в DDS для Windows
+* [**Cuttlefish**](https://github.com/akb825/Cuttlefish) - конвертация текстур из PNG в DDS для Linux
 * [**ffxiv-tex-converter**](https://github.com/emarron/ffxiv-tex-converter) - texture conversion from DDS to TEX (in-game format)
 
 ### Workflow for a texturer
@@ -64,8 +70,12 @@ This repo utilizes resources and media produced and copyrighted by SQUARE ENIX. 
 
 ### Workflow for a packer
 
-1. Clone this repo
-2. Get **TexConv** binary and place it in the root
-3. Launch `ConvertModToTex.bat`
+1. Install required components:
+   * Python 3.10
+   * [Python modules](https://github.com/emarron/ffxiv-tex-converter/tree/main?tab=readme-ov-file#required-python-libraries) for `ffxiv-tex-converter`
+2. Clone this repository and its submodule
+3. Windows: Download **TexConv** binary and place it at the root of this repo. Expected path to the executable: `.\texconv.exe`\
+   Linux: Download the latest release of **Cuttlefish** and unpack it at the root of this repo. Expected path to the executable: `./cuttlefish/bin/cuttlefish`
+4. Launch `ConvertModToTex-Win.bat` or `ConvertModToTex-Linux.ps1` depending on your platform
 
 Done, converted textures will be in `root_mod_png_dds_tex` folder and they can be used by the game as is. E.g. you can put them in a Penumbra modpack (provided you also generate JSON with file redirections) or import as raw files in TexTools.
