@@ -15,7 +15,7 @@ This repo utilizes resources and media produced and copyrighted by SQUARE ENIX. 
 * [**SaintCoinach.Cmd**](https://github.com/xivapi/SaintCoinach) - извлечение текстур
 * [**TexConv**](https://github.com/microsoft/DirectXTex) - конвертация текстур из PNG в DDS для Windows
 * [**Cuttlefish**](https://github.com/akb825/Cuttlefish) - конвертация текстур из PNG в DDS для Linux
-* [**ffxiv-tex-converter**](https://github.com/emarron/ffxiv-tex-converter) - конвертация текстур из DDS в TEX (игровой формат)
+* [**ffxiv-tex-converter**](https://github.com/kartoffels123/ffxiv-tex-converter) - конвертация текстур из DDS в TEX (игровой формат)
 
 ### Рабочий процесс для текстурщика
 
